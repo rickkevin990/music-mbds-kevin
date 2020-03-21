@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Username from "./components/Username";
 import ListeHobbies from "./components/ListeHobbies";
