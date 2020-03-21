@@ -1,0 +1,25 @@
+.image{
+    width:200px;
+    height: auto;
+}
+
+tbody {
+    display:block;
+    height:150px;
+    overflow:auto;
+    }
+    thead, tbody tr {
+    display:table;
+   
+    table-layout:fixed;
+    }
+   
+    table {
+    width:100%;
+    }
+.contentprincipal{
+        margin-left:100px;
+        max-width: 250px;
+        max-height: 500px;
+        width: 50%;
+}
