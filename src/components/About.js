@@ -30,77 +30,114 @@ function About({date,location,members, genres,associatedMusicalArtist,recordLabe
   return (
     <div>
         
-        <ul class="collection">
+        <ul class="collection ">
   
     <li class="collection-item avatar">
    
       <i class="material-icons circle green">cake</i>
     
-      <span class="title">{date}</span>
+     
+
+      <span class="title">Anniversaire :</span><br></br>
+      <p>{date} <br></br>
+         
+      </p>
       
       <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
     </li>
-    <li class="collection-item avatar">
+    <li class="collection-item avatar ">
       <i class="material-icons circle green">location_on</i>
-     { location.map((h, index) => (
-      <span class="title">- {h}</span>
-     ))}
+      <span class="title">location  :</span><br></br>
+      <br></br>
+     
+      { location.map((h, index) => (
+        
+        <span class="title">-{h}</span>
+     
+    ))}
+    
+
       <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
     </li>
+
     <li class="collection-item avatar">
       <i class="material-icons circle green">merge_type</i>
+      <span class="title">genres  :</span><br></br>
+      <br></br>
       { genres.map((h, index) => (
-      <span class="title">- {h}</span>
-     ))}
+     <span class="title">-{h}</span>
+    ))}
+
+
+    
      
       <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
     </li>
     <li class="collection-item avatar">
       <i class="material-icons circle green">merge_type</i>
-      { associatedMusicalArtist.map((h, index) => (
-      <span class="title">- {h}</span>
-     ))}
+      <span class="title">associatedMusicalArtist  :</span><br></br>
+      <br></br>
+     { associatedMusicalArtist.map((h, index) => (
+     <span class="title">-{h}</span>
+    ))}
+
+     
+
+
+     
      
       <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
     </li>
     <li class="collection-item avatar">
       <i class="material-icons circle green">merge_type</i>
-      { recordLabel.map((h, index) => (
-      <span class="title">- {h}</span>
-     ))}
+     
+
+      <span class="title">recordLabel  :</span><br></br>
+      <br></br>
+     { recordLabel.map((h, index) => (
+     <span class="title">-{h}</span>
+    ))}
+
+     
      
       <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
     </li>
     <li class="collection-item avatar">
       <i class="material-icons circle green">merge_type</i>
+      
+      <span class="title">dbp_genre  :</span><br></br>
+      <br></br>
       { dbp_genre.map((h, index) => (
-      <span class="title">- {h}</span>
+      <span class="title">-{h}</span>
      ))}
      
       <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
     </li>
     <li class="collection-item avatar">
       <i class="material-icons circle green">merge_type</i>
+
      
-      <span class="title">{deezerFans}</span>
-   
+     
+      <span class="title">Fan Deezer  :</span><br></br>
+      <p> {deezerFans} <br></br>
+         
+      </p>
      
       <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
     </li>
+   
     <li class="collection-item avatar">
-    {members !== undefined    &&
+    
       <div class="row">
       
-      <div class="col s6">
-      <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Former</a>
+      <div class="col s12">
+      <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Member</a>
       </div>
-      <div class="col s6">
-      <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Former Member</a>
-      </div>
+     
   
   
   </div>
-    }
+    
 
   <div id="modal1" class="modal">
     <div class="modal-content">

@@ -15,6 +15,11 @@ import ListeAlbum from "./ListeAlbum";
 import About from "./About"
 import './Entete.css'
 import 'materialize-css/dist/css/materialize.min.css';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import 'font-awesome/css/font-awesome.min.css';
 class Entete  extends React.Component {
   constructor(props) {
     super(props);
@@ -40,7 +45,12 @@ class Entete  extends React.Component {
       recordLabel:[],
       deezerFans:"",
       dbp_genre:[],
-
+      urlFacebook:"",
+      urlInstagram:"",
+      urlYoutube:"",
+      urlSpotify:"",
+      urlAmazon:"",
+      urlWikipedia:"",
 
     }
   }
@@ -88,6 +98,13 @@ class Entete  extends React.Component {
           recordLabel: metallicas.recordLabel,
           deezerFans: metallicas.deezerFans,
           dbp_genre: metallicas.dbp_genre,
+
+          urlFacebook:metallicas.urlFacebook,
+          urlInstagram:metallicas.urlInstagram,
+          urlYoutube:metallicas.urlYoutube,
+          urlSpotify:metallicas.urlSpotify,
+          urlAmazon:metallicas.urlAmazon,
+          urlWikipedia:metallicas.urlWikipedia,
         
   
         })
@@ -131,7 +148,28 @@ class Entete  extends React.Component {
             <h2 className="card-title black-text">{this.state.name}</h2>
           </div>
         </div>
+
+          <div class="">
+   
+    <div class="card horizontal">
+      
+      <div class="card-stacked">
+        <div class="card-content">
+         <a href={this.state.urlFacebook}><i class="fa fa-facebook" style={{ fontSize: 30 }}></i> </a>
+         <a href={this.state.urlSpotify}><i class="fa fa-spotify" style={{ fontSize: 30 }}></i> </a>
+         <a href={this.state.urlAmazon}><i class="fa fa-amazon" style={{ fontSize: 30 }}></i> </a>
+         <a href={this.state.urlYoutube}><i class="fa fa-youtube" style={{ fontSize: 30 }}></i> </a>
+         <a href={this.state.urlInstagram}> <i className="fa fa-instagram" style={{ fontSize: 30 }}></i></a>
+         <a href={this.state.urlWikipedia}>  <i className="fa fa-wikipedia-w" style={{ fontSize: 30 }}></i></a>
+        </div>
+     
       </div>
+    </div>
+  </div>
+     
+      </div>
+      
+
       <div className="col s4">
       
        { <About date={this.state.datenaissance} location={this.state.location} members = {this.state.members}
@@ -143,6 +181,7 @@ class Entete  extends React.Component {
        />}
        </div>
     </div>
+    
      {<ListeAlbum lalbum={this.state.albums} />}
   </div>
 

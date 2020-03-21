@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "npm":"6.13.4",
-    "node":"12.16.1"
+    "npm": "6.13.4",
+    "node": "12.16.1"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.5",
@@ -12,9 +12,10 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "materialize-css": "^1.0.0-rc.2",
     "express": "^4.17.1",
     "express-favicon": "^2.0.1",
+    "font-awesome": "^4.7.0",
+    "materialize-css": "^1.0.0-rc.2",
     "path": "^0.12.7",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
@@ -24,8 +25,6 @@
     "react-scripts": "3.4.0",
     "suggestion-react-input-search": "^1.4.0"
   },
-
-
   "scripts": {
     "start": "node server.js",
     "start-dev": "react-scripts start",

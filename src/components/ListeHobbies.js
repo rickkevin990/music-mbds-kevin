@@ -43,18 +43,10 @@ class ListeHobbies extends React.Component {
         <Hobby name={h} key={index} removeHobby={removeHobby} />
       ));
 
-      return (
-        <TableContainer component={Paper}>
-          <Table size="small">
-            <TableHead>
-              <TableRow>
-                <TableCell>Nom</TableCell>
-                <TableCell>Nom du club</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>{listeDesHobbies}</TableBody>
-          </Table>
-        </TableContainer>
+      return(
+      <div class="centerdiv"> 
+          <h1>Veulliez rechercher votre artiste sur la barre de recherche</h1>
+      </div>
         /*
         return (
           <div>

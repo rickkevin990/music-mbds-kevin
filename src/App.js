@@ -21,7 +21,7 @@ function App() {
   
       <BrowserRouter>
       <Search />
-        <Link to="/">Home</Link>
+        {/*<Link to="/">Home</Link>
         &nbsp;
         <Link to="/rock">Groupe Rock</Link>
         <Link to="/ui">Test Material UI</Link>
@@ -32,7 +32,7 @@ function App() {
         &nbsp;
         <Link to="/entete/test">Entete</Link>
         <Link to="/albums">list album</Link>
-        <Link to="/listMembre ">list Membre</Link>
+  <Link to="/listMembre ">list Membre</Link>*/}
 
 
 
