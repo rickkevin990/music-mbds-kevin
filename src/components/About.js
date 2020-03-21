@@ -25,7 +25,7 @@ function About({date,location,members, genres,associatedMusicalArtist,recordLabe
   // Or with jQuery
 
  // $('.dropdown-trigger').dropdown();
-  //const result = Object.values(location);
+  //const result = Object.values(location
      
   return (
     <div>
