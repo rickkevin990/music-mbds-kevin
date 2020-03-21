@@ -4,7 +4,7 @@
   "private": true,
   "engines": {
     "npm":"6.13.4",
-    "ndoe":"12.16.1"
+    "node":"12.16.1"
   },
   "dependencies": {
     "@material-ui/core": "^4.9.5",
@@ -21,7 +21,7 @@
     "suggestion-react-input-search": "^1.4.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
