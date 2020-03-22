@@ -67,12 +67,6 @@ class Entete  extends React.Component {
    }
   
   
-  componentDidMount(){
-   
-  
-   
-
-   }
 
    
  
@@ -161,6 +155,36 @@ class Entete  extends React.Component {
          <a href={this.state.urlYoutube}><i class="fa fa-youtube" style={{ fontSize: 30 }}></i> </a>
          <a href={this.state.urlInstagram}> <i className="fa fa-instagram" style={{ fontSize: 30 }}></i></a>
          <a href={this.state.urlWikipedia}>  <i className="fa fa-wikipedia-w" style={{ fontSize: 30 }}></i></a>
+
+         <div>
+           <h2>Membre</h2>
+         <table class="">
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>Genre</th>
+              <th>Birthday</th>
+              <th>Instrument</th>
+
+          </tr>
+        </thead>
+        {this.state.members !== undefined  &&
+        <tbody>
+          { this.state.members.map((m, index) => (
+          <tr>
+            <td>{m.name}</td>
+            <td>{m.gender}</td>
+            <td>{m.birthDate}</td>
+            { m.instruments.map((m1, index) => (
+            <td>{m1}</td>
+            ))}
+          </tr>
+          ))}
+          
+        </tbody>
+        }
+      </table>
+         </div>
         </div>
      
       </div>

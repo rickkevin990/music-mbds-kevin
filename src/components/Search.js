@@ -22,7 +22,18 @@ class Search  extends React.Component {
       //  console.log("iiiiii"+metallicaEnObjetJS)
       
         this.setState({ searchobject : metallicaEnObjetJS })
-        return metallicaEnObjetJS;
+       
+     }
+
+     fetchData(url){
+        fetch(url)
+        .then(reponseEnJson => {
+          //console.log(reponseEnJson);
+           // transforme en objet js
+           return reponseEnJson.json();
+        }).then(reponseEnJson => {
+            this.setState({ searchobject : reponseEnJson })
+        })
      }
 
      suggestionSelected(value){
@@ -34,18 +45,19 @@ class Search  extends React.Component {
             const value = e.target.value;
             const url = "https://wasabi.i3s.unice.fr/search/fulltext/:"+value
             let sugg = [];
-            let data = this.getData(url);
+           
            
             if(value.length>0){
+               this.fetchData(url);
                 var input=[]
                 const regex  = new RegExp(`^${value}`,'i');
+                console.log("value"+  this.state.searchobject);
+               
 
-                this.state.searchobject.map((m, index) => (
-                    console.log("mmmm"+m),
-                    input.push(m.name)
-                    //this.setState({listname:m})
-                
-                ))
+                this.state.searchobject.forEach(u => {
+                    console.log("mmmm"+u.name);
+                    input.push(u.name)
+                  })
                sugg = input.sort().filter(v=>regex.test(v));
               
             
@@ -62,9 +74,9 @@ class Search  extends React.Component {
               
             <ul class="collection">
                
-                {sugg.map((item)=>
+                {sugg.map((item,index)=>
 
-                <Link to={`/entete/${item}`} onClick={()=>this.suggestionSelected(item)} class="collection-item avatar">
+                <Link key={index} to={`/entete/${item}`} onClick={()=>this.suggestionSelected(item)} class="collection-item avatar">
                 <i class="material-icons circle">folder</i>     
                 {item} {console.log(item)}
                 </Link>

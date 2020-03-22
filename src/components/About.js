@@ -20,7 +20,7 @@ function About({date,location,members, genres,associatedMusicalArtist,recordLabe
  
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.modal');
-    var instances = M.Modal.init(elems, {inDuration: 300, outDuration: 225});
+    var instances = M.Modal.init(elems, {inDuration: 300, outDuration: 1000});
   });
   // Or with jQuery
 
